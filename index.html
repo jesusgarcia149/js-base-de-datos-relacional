@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es-VE">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Información de la Universidad</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <h2>Jesús García - 26218149</h2>
+        </header>
+
+        <main id="app">
+            <h1>Universidad</h1>
+            <hr />
+
+            <h2>Registrar profesor</h2>
+            <form action="" method="post" id="profesor">
+                <div class="campos">
+                    <label for="cedula">
+                        <span>Cédula</span>
+                        <input type="text" name="cedula" id="cedula" />
+                    </label>
+
+                    <label for="nombres">
+                        <span>Nombres:</span>
+                        <input type="text" name="nombres" id="nombres" />
+                    </label>
+
+                    <label for="apellidos">
+                        <span>Apellidos:</span>
+                        <input type="text" name="apellidos" id="apellidos" />
+                    </label>
+
+                    <label for="profesion">
+                        <span>Profesión:</span>
+                        <input type="text" name="profesion" id="profesion" />
+                    </label>
+
+                    <label for="carrera">
+                        <span>Carrera:</span>
+                        <input type="text" name="carrera" id="carrera" />
+                    </label>
+
+                    <label for="materias">
+                        <span>Materias:</span>
+                        <input type="text" name="materias" id="materias" />
+                    </label>
+                </div>
+
+                <div class="group-buttons">
+                    <button type="submit">Registrar profesor</button>
+                </div>
+            </form>
+
+            <hr>
+
+            <h2>Registrar estudiante</h2>
+            <form action="" method="post" id="estudiante">
+                <div class="campos">
+                    <label for="cedula">
+                        <span>Cédula</span>
+                        <input type="text" name="cedula" id="cedula" />
+                    </label>
+
+                    <label for="nombres">
+                        <span>Nombres:</span>
+                        <input type="text" name="nombres" id="nombres" />
+                    </label>
+
+                    <label for="apellidos">
+                        <span>Apellidos:</span>
+                        <input type="text" name="apellidos" id="apellidos" />
+                    </label>
+
+                    <label for="carrera">
+                        <span>Carrera:</span>
+                        <input type="text" name="carrera" id="carrera" />
+                    </label>
+
+                    <label for="materias">
+                        <span>Materias:</span>
+                        <input type="text" name="materias" id="materias" />
+                    </label>
+                </div>
+
+                <div class="group-buttons">
+                    <button type="submit">Registrar estudiante</button>
+                </div>
+            </form>
+
+            <hr>
+
+            <h2>Registrar notas</h2>
+            <form action="" method="post" id="notas">
+                <div class="campos">
+                    <label for="cedula">
+                        <span>Cèdula</span>
+                        <input type="text" name="cedula" id="cedula" />
+                    </label>
+
+                    <label for="materia">
+                        <span>Materia</span>
+                        <input type="text" name="materia" id="materia" />
+                    </label>
+
+                    <label for="nota1">
+                        <span>Nota1:</span>
+                        <input type="text" name="nota1" id="nota1" />
+                    </label>
+
+                    <label for="nota2">
+                        <span>Nota2:</span>
+                        <input type="text" name="nota2" id="nota2" />
+                    </label>
+
+                    <label for="nota3">
+                        <span>Nota3:</span>
+                        <input type="text" name="nota3" id="nota3" />
+                    </label>
+
+                    <label for="nota4">
+                        <span>Nota4:</span>
+                        <input type="text" name="nota4" id="nota4" />
+                    </label>
+                </div>
+
+                <div class="group-buttons">
+                    <button type="submit">Registrar Notas</button>
+                </div>
+            </form>
+
+            <hr>
+            <h2>Consultar Profesor</h2>
+            <form action="" id="consultar-profesor">
+                <label for="profesor">
+                    <span>Cedula del Profesor</span>
+                    <input type="text" name="cedulaProfesor" id="cedulaProfesor" />
+                </label>
+                <div class="group-buttons">
+                    <button type="submit">Consultar Profesor</button>
+                </div>
+            </form>
+
+            <p>Datos del Profesor</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>profesion</th>
+                        <th>Carrera</th>
+                        <th>Materia</th>
+                    </tr>
+                </thead>
+                <tbody id="mostrar-profesor"></tbody>
+            </table>
+
+            <hr>
+            <h2>Consultar Estudiante</h2>
+            <form action="" id="consultar-estudiante">
+                <label for="estudiante">
+                    <span>Cedula del Estudiante</span>
+                    <input type="text" name="cedulaEstudiante" id="cedulaEstudiante" />
+                </label>
+                <div class="group-buttons">
+                    <button type="submit">Consultar Estudiante</button>
+                </div>
+            </form>
+
+            <p>Datos del Estudiante</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Carrera</th>
+                        <th>Materia</th>
+                    </tr>
+                </thead>
+                <tbody id="mostrar-estudiante"></tbody>
+            </table>
+
+            <hr>
+            <h2>Lista de Profesores</h2>
+            <button id="btn-mostrar-lista-profesores">Cargar Lista</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                    </tr>
+                </thead>
+                <tbody id="mostrar-lista-profesores"></tbody>
+            </table>
+
+            <hr>
+            <h2>Lista de Estudiantes</h2>
+            <button id="btn-mostrar-lista-estudiante">Cargar Lista</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                    </tr>
+                </thead>
+                <tbody id="mostrar-lista-estudiante"></tbody>
+            </table>
+
+            <hr>
+            <h2>Lista de Notas</h2>
+            <button id="btn-mostrar-notas">Cargar Lista</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cedula</th>
+                        <th>Nombres</th>
+                        <th>Apellidos</th>
+                        <th>Materia</th>
+                        <th>Nota1</th>
+                        <th>Nota2</th>
+                        <th>Nota3</th>
+                        <th>Nota4</th>
+                        <th>Promedio</th>
+                    </tr>
+                </thead>
+                <tbody id="mostrar-lista-notas"></tbody>
+            </table>
+
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>
